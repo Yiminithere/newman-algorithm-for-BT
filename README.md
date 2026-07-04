@@ -58,13 +58,13 @@ Download each file from its source above and place it at the path the correspond
 
 | Paper reference | Notebook | Output file(s) |
 |---|---|---|
-| Fig. [2] — convergence factor vs. α (SBM regimes) | `convergence_factor_comparison.ipynb` | `{balanced,cluster,bipartite}_{sigma}_{L}.pdf`, `.csv` |
-| Fig. [3] — convergence history (SBM regimes) | `convergence_history.ipynb` | `history_{balanced,cluster,bipartite}_{sigma}.pdf` |
-| Fig. [4 (a), (b)] — bipartite non-convergence example | `example_bipartite.ipynb` | `nonconvergence.pdf`, `nonconvergence_hist.pdf` |
-| Fig. [4 (c)] — cyclic non-convergence example | `example_cyclic.ipynb` | `backward_cycle.pdf` |
-| Fig. [5 (top line)] — Vervet monkey experiment | `example_monkey.ipynb` | `vervet_rates.pdf`, `vervet.pdf` |
-| Fig. [5 (middle line)] — ATP tennis experiment | `example_tennis.ipynb` | `atp_rates.pdf`, `atp.pdf` |
-| Fig. [5 (bottom line)] — ASSISTments experiment | `example_ASSISTments.ipynb` | `math_rates.pdf`, `math.pdf` |
+| Fig. 2 — convergence factor vs. α (SBM regimes) | `convergence_factor_comparison.ipynb` | `{balanced,cluster,bipartite}_{sigma}_{L}.pdf`, `.csv` |
+| Fig. 3 — convergence history (SBM regimes) | `convergence_history.ipynb` | `history_{balanced,cluster,bipartite}_{sigma}.pdf` |
+| Fig. 4 (a) and (b) — bipartite non-convergence example | `example_bipartite.ipynb` | `nonconvergence.pdf`, `nonconvergence_hist.pdf` |
+| Fig. 4 (c) — cyclic non-convergence example | `example_cyclic.ipynb` | `backward_cycle.pdf` |
+| Fig. 5 (top line) — Vervet monkey experiment | `example_monkey.ipynb` | `vervet_rates.pdf`, `vervet.pdf` |
+| Fig. 5 (middle line) — ATP tennis experiment | `example_tennis.ipynb` | `atp_rates.pdf`, `atp.pdf` |
+| Fig. 5 (bottom line) — ASSISTments experiment | `example_ASSISTments.ipynb` | `math_rates.pdf`, `math.pdf` |
 
 
 To run a notebook, open it in Jupyter and select **Kernel → Restart & Run All** — every notebook has been verified to run top-to-bottom from a clean kernel with only `utils.py` (and, where applicable, its input data file) present alongside it.
