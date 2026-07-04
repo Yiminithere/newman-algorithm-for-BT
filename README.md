@@ -6,10 +6,10 @@ Code to reproduce the experiments, figures, and tables in **[Paper Title — fil
 
 ## Overview
 
-This repository studies the convergence behavior of Newman's α-scheme for fitting the Bradley–Terry (BT) model, under both synchronous and asynchronous fixed-point updates. It contains:
+This repository studies the convergence behavior of Newman's α-scheme for fitting the Bradley–Terry (BT) model, under both synchronous and asynchronous updates. It contains:
 
 - Synthetic experiments on stochastic block model (SBM) comparison graphs (homogeneous, clustered, near-bipartite regimes)
-- Two hand-constructed non-convergence examples (a purely bipartite graph, and a purely cyclic graph)
+- Two bipartite structures (a random bipartite graph, and a purely cyclic graph)
 - Real-data experiments (vervet monkey dominance hierarchy, ATP tennis, ASSISTments student–problem responses)
 
 All core numerical routines (Jacobian computation, spectral-gap / local-convergence-factor calculation, the synchronous/asynchronous update rules, and MLE fitting) live in a single shared module, `utils.py`, imported by every notebook.
@@ -26,7 +26,7 @@ All core numerical routines (Jacobian computation, spectral-gap / local-converge
 | `example_ASSISTments.ipynb` | ASSISTments student–problem response experiment (real, bipartite data). |
 | `example_bipartite.ipynb` | Hand-constructed bipartite non-convergence example. |
 | `example_cyclic.ipynb` | Hand-constructed purely-cyclic ("backward cycle") non-convergence example. |
-| `data/` | **Not included** — see [Data](#data) below. |
+| `data` | Real-world datasets used in the simulation |
 
 ## Requirements / Installation
 
@@ -60,11 +60,11 @@ Download each file from its source above and place it at the path the correspond
 |---|---|---|
 | Fig. 2 — convergence factor vs. α (SBM regimes) | `convergence_factor_comparison.ipynb` | `{balanced,cluster,bipartite}_{sigma}_{L}.pdf`, `.csv` |
 | Fig. 3 — convergence history (SBM regimes) | `convergence_history.ipynb` | `history_{balanced,cluster,bipartite}_{sigma}.pdf` |
-| Fig. 4 (a) and (b) — bipartite non-convergence example | `example_bipartite.ipynb` | `nonconvergence.pdf`, `nonconvergence_hist.pdf` |
-| Fig. 4 (c) — cyclic non-convergence example | `example_cyclic.ipynb` | `backward_cycle.pdf` |
-| Fig. 5 (top line) — Vervet monkey experiment | `example_monkey.ipynb` | `vervet_rates.pdf`, `vervet.pdf` |
-| Fig. 5 (middle line) — ATP tennis experiment | `example_tennis.ipynb` | `atp_rates.pdf`, `atp.pdf` |
-| Fig. 5 (bottom line) — ASSISTments experiment | `example_ASSISTments.ipynb` | `math_rates.pdf`, `math.pdf` |
+| Fig. 4 (a) and (b) — random bipartite example | `example_bipartite.ipynb` | `nonconvergence.pdf`, `nonconvergence_hist.pdf` |
+| Fig. 4 (c) — cyclic example | `example_cyclic.ipynb` | `backward_cycle.pdf` |
+| Fig. 5 (top panel) — Vervet monkey experiment | `example_monkey.ipynb` | `vervet_rates.pdf`, `vervet.pdf` |
+| Fig. 5 (middle panel) — ATP tennis experiment | `example_tennis.ipynb` | `atp_rates.pdf`, `atp.pdf` |
+| Fig. 5 (bottom panel) — ASSISTments experiment | `example_ASSISTments.ipynb` | `math_rates.pdf`, `math.pdf` |
 
 
 To run a notebook, open it in Jupyter and select **Kernel → Restart & Run All** — every notebook has been verified to run top-to-bottom from a clean kernel with only `utils.py` (and, where applicable, its input data file) present alongside it.
