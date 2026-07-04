@@ -9,8 +9,8 @@ Code to reproduce the experiments, figures, and tables in **[Paper Title — fil
 This repository studies the convergence behavior of Newman's α-scheme for fitting the Bradley–Terry (BT) model, under both synchronous and asynchronous fixed-point updates. It contains:
 
 - Synthetic experiments on stochastic block model (SBM) comparison graphs (homogeneous, clustered, near-bipartite regimes)
-- Real-data experiments (vervet monkey dominance hierarchy, ATP tennis, ASSISTments student–problem responses)
 - Two hand-constructed non-convergence examples (a purely bipartite graph, and a purely cyclic graph)
+- Real-data experiments (vervet monkey dominance hierarchy, ATP tennis, ASSISTments student–problem responses)
 
 All core numerical routines (Jacobian computation, spectral-gap / local-convergence-factor calculation, the synchronous/asynchronous update rules, and MLE fitting) live in a single shared module, `utils.py`, imported by every notebook.
 
