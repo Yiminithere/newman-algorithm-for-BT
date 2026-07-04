@@ -1,16 +1,16 @@
 # Convergence of Newman's α-Scheme for Bradley–Terry Estimation
 
-Code to reproduce the experiments, figures, and tables in **[Paper Title — fill in]** by **[Author(s) — fill in]**, targeting *JMLR*.
+Code to reproduce the experiments, figures, and tables in **[Paper Title — fill in]** by **[Author(s) — fill in]**.
 
 > 📄 Paper: [arXiv link — fill in once available]
 
 ## Overview
 
-This repository studies the convergence behavior of Newman's α-scheme for fitting the Bradley–Terry (BT) model, under both synchronous and asynchronous (Gauss–Seidel-style) fixed-point updates. It contains:
+This repository studies the convergence behavior of Newman's α-scheme for fitting the Bradley–Terry (BT) model, under both synchronous and asynchronous fixed-point updates. It contains:
 
 - Synthetic experiments on stochastic block model (SBM) comparison graphs (homogeneous, clustered, near-bipartite regimes)
 - Real-data experiments (vervet monkey dominance hierarchy, ATP tennis, ASSISTments student–problem responses)
-- Two hand-constructed non-convergence examples (a purely bipartite graph, and a purely cyclic/backward graph)
+- Two hand-constructed non-convergence examples (a purely bipartite graph, and a purely cyclic graph)
 
 All core numerical routines (Jacobian computation, spectral-gap / local-convergence-factor calculation, the synchronous/asynchronous update rules, and MLE fitting) live in a single shared module, `utils.py`, imported by every notebook.
 
@@ -58,16 +58,14 @@ Download each file from its source above and place it at the path the correspond
 
 | Paper reference | Notebook | Output file(s) |
 |---|---|---|
-| Fig. [X] — convergence factor vs. α (SBM regimes) | `convergence_factor_comparison.ipynb` | `{balanced,cluster,bipartite}_{sigma}_{L}.pdf`, `.csv` |
-| Fig. [X] — convergence history (SBM regimes) | `convergence_history.ipynb` | `history_{balanced,cluster,bipartite}_{sigma}.pdf` |
-| Fig. [X] — Vervet monkey experiment | `example_monkey.ipynb` | `vervet_rates.pdf`, `vervet.pdf` |
-| Fig. [X] — ATP tennis experiment | `example_tennis.ipynb` | `atp_rates.pdf`, `atp.pdf` |
-| Fig. [X] — ASSISTments experiment | `example_ASSISTments.ipynb` | `math_rates.pdf`, `math.pdf` |
-| Fig. [X] — bipartite non-convergence example | `example_bipartite.ipynb` | `nonconvergence.pdf`, `nonconvergence_hist.pdf` |
-| Fig. [X] — cyclic non-convergence example | `example_cyclic.ipynb` | `backward_cycle.pdf` |
-| Table [X] — real-data ρ / ρ̄ summary | `example_monkey.ipynb`, `example_tennis.ipynb`, `example_ASSISTments.ipynb` | printed `Sync:`/`Async:` blocks |
+| Fig. [2] — convergence factor vs. α (SBM regimes) | `convergence_factor_comparison.ipynb` | `{balanced,cluster,bipartite}_{sigma}_{L}.pdf`, `.csv` |
+| Fig. [3] — convergence history (SBM regimes) | `convergence_history.ipynb` | `history_{balanced,cluster,bipartite}_{sigma}.pdf` |
+| Fig. [4 (a), (b)] — bipartite non-convergence example | `example_bipartite.ipynb` | `nonconvergence.pdf`, `nonconvergence_hist.pdf` |
+| Fig. [4 (c)] — cyclic non-convergence example | `example_cyclic.ipynb` | `backward_cycle.pdf` |
+| Fig. [5 (top line)] — Vervet monkey experiment | `example_monkey.ipynb` | `vervet_rates.pdf`, `vervet.pdf` |
+| Fig. [5 (middle line)] — ATP tennis experiment | `example_tennis.ipynb` | `atp_rates.pdf`, `atp.pdf` |
+| Fig. [5 (bottom line)] — ASSISTments experiment | `example_ASSISTments.ipynb` | `math_rates.pdf`, `math.pdf` |
 
-*(Fill in the actual figure/table numbers once the paper is finalized.)*
 
 To run a notebook, open it in Jupyter and select **Kernel → Restart & Run All** — every notebook has been verified to run top-to-bottom from a clean kernel with only `utils.py` (and, where applicable, its input data file) present alongside it.
 
