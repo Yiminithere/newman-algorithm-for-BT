@@ -1,4 +1,4 @@
-# Convergence of Newman's α-Scheme for Bradley–Terry Estimation
+# Analysis of Newman's α-Scheme for the Bradley–Terry Model
 
 Code to reproduce the experiments, figures, and tables in **[Paper Title — fill in]** by **[Author(s) — fill in]**.
 
