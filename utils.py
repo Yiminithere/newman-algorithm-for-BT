@@ -660,7 +660,7 @@ def newman_update(pi, win_list, loss_list, alpha=0, w=1, sync='full', index=None
 
 
 def newman_fpi(win_list, loss_list, alpha=0, sync='full',
-                maxiter=1000, tol=1e-16, err_ord=2, verbose=False):
+                maxiter=5000, tol=1e-16, err_ord=2, verbose=False):
     """
     Run Newman's alpha-scheme fixed-point iteration to convergence,
     starting from the all-ones vector, to obtain the maximum-likelihood
@@ -677,7 +677,7 @@ def newman_fpi(win_list, loss_list, alpha=0, sync='full',
     err_ord : int, default 2
         Norm order used for the stopping criterion.
     verbose : bool, default False
-        If True, print the iterate-to-iterate error at every step (useful
+        If True, print the iterate-to-iterate relative error at every step (useful
         for monitoring convergence / non-convergence in real time, e.g.
         when diagnosing a non-convergent sync/alpha=0 case). Default is
         False so that calling this function inside a large sweep (e.g.
@@ -696,7 +696,7 @@ def newman_fpi(win_list, loss_list, alpha=0, sync='full',
     while err > tol and i < maxiter:
         i += 1
         pi_new = newman_update(pi, win_list, loss_list, alpha=alpha, sync=sync)
-        err = np.linalg.norm(pi_new-pi, ord=err_ord)
+        err = np.linalg.norm(pi_new-pi, ord=err_ord)/np.linalg.norm(pi_new, ord=err_ord)
         if verbose:
             print(f"l{err_ord} error:", err)
         pi = pi_new.copy()

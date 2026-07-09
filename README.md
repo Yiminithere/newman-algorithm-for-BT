@@ -62,9 +62,9 @@ Download each file from its source above and place it at the path the correspond
 | Fig. 3 — convergence history (SBM regimes) | `convergence_history.ipynb` | `history_{balanced,cluster,bipartite}_{sigma}.pdf` |
 | Fig. 4 (a) and (b) — random bipartite example | `example_bipartite.ipynb` | `nonconvergence.pdf`, `nonconvergence_hist.pdf` |
 | Fig. 4 (c) — cyclic example | `example_cyclic.ipynb` | `backward_cycle.pdf` |
-| Fig. 5 (top panel) — Vervet monkey experiment | `example_monkey.ipynb` | `vervet_rates.pdf`, `vervet.pdf` |
+| Fig. 5 (left panel) — Vervet monkey experiment | `example_monkey.ipynb` | `vervet_rates.pdf`, `vervet.pdf` |
 | Fig. 5 (middle panel) — ATP tennis experiment | `example_tennis.ipynb` | `atp_rates.pdf`, `atp.pdf` |
-| Fig. 5 (bottom panel) — ASSISTments experiment | `example_ASSISTments.ipynb` | `math_rates.pdf`, `math.pdf` |
+| Fig. 5 (right panel) — ASSISTments experiment | `example_ASSISTments.ipynb` | `math_rates.pdf`, `math.pdf` |
 
 
 To run a notebook, open it in Jupyter and select **Kernel → Restart & Run All** — every notebook has been verified to run top-to-bottom from a clean kernel with only `utils.py` (and, where applicable, its input data file) present alongside it.
