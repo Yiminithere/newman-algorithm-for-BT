@@ -660,7 +660,7 @@ def newman_update(pi, win_list, loss_list, alpha=0, w=1, sync='full', index=None
 
 
 def newman_fpi(win_list, loss_list, alpha=0, sync='full',
-                maxiter=5000, tol=1e-16, err_ord=2, verbose=False):
+                maxiter=10000, tol=1e-15, err_ord=2, verbose=False):
     """
     Run Newman's alpha-scheme fixed-point iteration to convergence,
     starting from the all-ones vector, to obtain the maximum-likelihood
@@ -700,6 +700,13 @@ def newman_fpi(win_list, loss_list, alpha=0, sync='full',
         if verbose:
             print(f"l{err_ord} error:", err)
         pi = pi_new.copy()
+
+    if err <= tol:
+        print(f"Converged in {i} iterations (l{err_ord} error = {err:.3e}).")
+    else:
+        print(f"Maximum iterations ({maxiter}) reached without convergence "
+              f"(l{err_ord} error = {err:.3e}, tol = {tol:.3e}).")
+
     return pi
 
 
